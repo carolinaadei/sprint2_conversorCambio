@@ -130,13 +130,15 @@ width: 26rem;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 1.5rem;
 }
 
 .containerRetangle {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 1.5rem;
   justify-content: center;
+  margin-left: 3rem;
 }
 
 .currency-box {
@@ -150,25 +152,6 @@ width: 26rem;
   position: relative;
   padding-left: 70px;
   flex-direction: column;
-}
-
-#valorOrigem{
-  margin-top: 0px;
-  margin-bottom: 5px;
-  padding: 0.5rem;
-  width: 8rem;
-  height: 3rem;
-  border: none;
-  border-radius: 10px;
-  background-color: #fff;
-  display: flex;
-  margin-left: 200px;
-  text-align: center;
-  font-size: 1.2rem;
-  outline: none;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-  transition: 0.1s;
-
 }
 
 #valorConvertido{
@@ -187,44 +170,38 @@ width: 26rem;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
   color: #333;
   cursor: not-allowed;
-  
 }
 
-.arrow {
-  width: 24px;
-  height: 24px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-.copy-paste-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  background-color: transparent;
-  padding: 1.5rem;
-  border-radius: 10px;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.copy-btn {
-  width: 40px;
-  height: 40px;
+#valorOrigem{
+  margin-top: 0px;
+  margin-bottom: 5px;
+  padding: 0.5rem;
+  width: 8rem;
+  height: 3rem;
   border: none;
-  background-color: transparent;
-  cursor: pointer;
-  background-size: 24px;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.60;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  margin-left: 200px;
+  text-align: center;
+  font-size: 1.2rem;
+  outline: none;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.arrow-icon{
+  width: 1.5rem;
+  height: 1.5rem;
+  align-items: center;
+}
+
+
+.clipboard-icon{
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 5rem;
+  margin-left: 0rem;
+  opacity: 0.50;
 }
 
 .circleFlag {
