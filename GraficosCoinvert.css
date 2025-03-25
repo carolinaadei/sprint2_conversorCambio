@@ -1,92 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-* {
-    margin: 0;
-    bottom: 0;
-    box-sizing: border-box;
-}
 
 body {
-    display: flex;
-    flex-direction: column;
     background-color: #9FC587;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Header attributes */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #6C9457;
-    margin: 1rem;
-    padding: 1rem;
-    border-radius: 20px;
-}
-
-header > span {
-    font-size: 18px;
-    font-weight: normal;
-    color: #406711;
-}
-
-header > span > b {
-    font-weight: normal;
-    color: black;
-}
-
-header > div {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-header > div > a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: black;
-
-    background: #9FC587;
-    border-radius: 20px;
-    padding: 0 1rem;
-}
-
-header > div > a > img {
-    height: 18px;
-    width: 18px;
-}
-
-header > div > a:hover {
-    background: #D9D9D9;
-    transition: all 0.3s ease-in-out;
-}
-
-header > div > a.active {
-    background: #D9D9D9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  position: relative;
 }
 
 main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    margin: 50px;
-    margin-left: 280px;
+    justify-content: center;
     gap: 1rem;
+    margin: 10rem;
+}
+   
+.search-container {
+    background: #D9D9D9;
+    border-radius: 20px;
+    padding: 1rem;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 400px;
 }
 
 .search-input-wrapper {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    gap: 0.5rem;
     padding: 0.4rem 1rem;
-    background: #D9D9D9;
+    background: #B8B8B8;
     border-radius: 20px;
-    width: 390px;
-    margin-top: 80px;
-    
+    width: 100%;
 }
 
 .search-input-wrapper > img {
@@ -99,8 +52,6 @@ main {
     background: transparent;
     width: 100%;
     outline: none;
-    align-items: center;
-    font-size: 1rem;
 }
 
 .currency-container {
@@ -109,7 +60,112 @@ main {
     height: 300px;
     border-radius: 20px;
     padding: 1rem;
-    margin-top: 100px;
+}
+  .coinverter {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #9FC587;
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+  }
+  .coin {
+    color: #9FC587;
+  }
+  .verter {
+    color: #000000;
+  }
+  .container {
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: #6C9457;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    position: absolute;
+    top: 2px;
+    width: 1300px;
+    height: 2%;
+  }
+  a {
+    width: 140px;
+    height: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-color: transparent;
+    border-radius: 20px;
+    background-color: #9FC587;
+    transition: background-color 0.3s;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 24px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: 8px center;
+    text-decoration: none;
+    color: black;
+  }
+  .container a:hover {
+    background-color: #b3beac;
+  }
+  
+  a:active {
+    background-color: #d9d9d9;
+  }
+  .active {
+  background-color: #d9d9d9;
+  }
+  .home-button {
+    background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke-width%3D%221.5%22%20stroke%3D%22currentColor%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22m2.25%2012%208.954-8.955c.44-.439%201.152-.439%201.591%200L21.75%2012M4.5%209.75v10.125c0%20.621.504%201.125%201.125%201.125H9.75v-4.875c0-.621.504-1.125%201.125-1.125h2.25c.621%200%201.125.504%201.125%201.125V21h4.125c.621%200%201.125-.504%201.125-1.125V9.75M8.25%2021h8.25%22%20%2F%3E%3C%2Fsvg%3E');
+  }
+  .criptomoeda-button {
+    background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke-width%3D%221.5%22%20stroke%3D%22currentColor%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M12%206v12m-3-2.818.879.659c1.171.879%203.07.879%204.242%200%201.172-.879%201.172-2.303%200-3.182C13.536%2012.219%2012.768%2012%2012%2012c-.725%200-1.45-.22-2.003-.659-1.106-.879-1.106-2.303%200-3.182s2.9-.879%204.006%200l.415.33M21%2012a9%209%200%201%201-18%200%209%209%200%200%201%2018%200Z%22%20%2F%3E%3C%2Fsvg%3E');
+  }
+  .grafico-button {
+    background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke-width%3D%221.5%22%20stroke%3D%22currentColor%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M3%2013.125C3%2012.504%203.504%2012%204.125%2012h2.25c.621%200%201.125.504%201.125%201.125v6.75C7.5%2020.496%206.996%2021%206.375%2021h-2.25A1.125%201.125%200%200%201%203%2019.875v-6.75ZM9.75%208.625c0-.621.504-1.125%201.125-1.125h2.25c.621%200%201.125.504%201.125%201.125v11.25c0%20.621-.504%201.125-1.125%201.125h-2.25a1.125%201.125%200%200%201-1.125-1.125V8.625ZM16.5%204.125c0-.621.504-1.125%201.125-1.125h2.25C20.496%203%2021%203.504%2021%204.125v15.75c0%20.621-.504%201.125-1.125%201.125h-2.25a1.125%201.125%200%200%201-1.125-1.125V4.125Z%22%20%2F%3E%3C%2Fsvg%3E');
+  }
+  .arrow-icon{
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3'/%3E%3C/svg%3E");
+    width: 24px;
+    height: 24px;
+  }
+  .circle {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: lightgray;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  .currency-box .circle {
+  background: url(<path-to-flag-image>) no-repeat center;
+  }
+  .currency-box {
+  width: 415px;
+  height: 125px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #D9D9D9;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-left: 70px;
+  }
+  .containerRetangle {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -118,4 +174,4 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+    }

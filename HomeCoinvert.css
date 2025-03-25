@@ -1,224 +1,238 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 * {
-    margin: 0;
-    bottom: 0;
-    box-sizing: border-box;
+  margin: 0;
+  bottom: 0;
+  box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    background-color: #9FC587;
-    font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: #9FC587;
+  font-family: 'Poppins', sans-serif;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #6C9457;
-    margin: 1rem;
-    padding: 1rem;
-    border-radius: 20px;
-}
-
-header > span {
-    font-size: 18px;
-    font-weight: normal;
-    color: #406711;
-}
-
-header > span > b {
-    font-weight: normal;
-    color: black;
-}
-
-header > div {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-header > div > a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: black;
-    background: #9FC587;
-    border-radius: 20px;
-    padding: 0 1rem;
-}
-
-header > div > a > img {
-    height: 18px;
-    width: 18px;
-}
-
-header > div > a:hover {
-    background: #D9D9D9;
-    transition: all 0.3s ease-in-out;
-}
-header > div > a.active {
-  background: #D9D9D9;
-}
-
-main {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding-top: 8rem;
-  width: 100%;
-  height: calc(100vh - 14.5vh);
-}
-
-.search-inputs {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    gap: 3.5rem;
-
-}
-
-.search-input-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0.4rem 1rem;
-  background: #D9D9D9;
+  justify-content: space-between;
+  background-color: #6C9457;
+  margin: 1rem;
+  padding: 1rem;
   border-radius: 20px;
 }
 
+header > span {
+  font-size: 18px;
+  font-weight: normal;
+  color: #406711;
+}
+
+header > span > b {
+  font-weight: normal;
+  color: black;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+header > div > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: black;
+  background: #9FC587;
+  border-radius: 20px;
+  padding: 0 1rem;
+}
+
+header > div > a > img {
+  height: 18px;
+  width: 18px;
+}
+
+header > div > a:hover {
+  background: #D9D9D9;
+  transition: all 0.3s ease-in-out;
+}
+header > div > a.active {
+background: #D9D9D9;
+}
+
+main {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-top: 8rem;
+width: 100%;
+height: calc(100vh - 14.5vh);
+}
+
+.search-inputs {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5rem;
+}
+
+.search-input-wrapper {
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0.4rem 1rem;
+background: #D9D9D9;
+border-radius: 20px;
+width: 26rem;
+}
+
 .search-input-wrapper > img {
-    height: 15px;
-    width: 15px;
+  height: 15px;
+  width: 15px;
 }
 
 .search-input-wrapper > input {
-    border: none;
-    background: transparent;
-    width: 370px;
-    outline: none;
-    align-items: center;
-    font-size: 1rem;
+  border: none;
+  background: transparent;
+  width: 20rem;
+  outline: none;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+#label{
+  font-size: 0.8rem;
+}
+#moedaOrigem{
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 0.8rem;
+  width: 10rem;
+}
+
+#moedaDestino{
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 0.8rem;
+  width: 10rem;
 }
 
 .currency-container {
-    background: transparent;
-    border-radius: 20px;
-    padding: 1rem;
-    box-shadow: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  background: transparent;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .containerRetangle {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
 }
 
 .currency-box {
-    width: 415px;
-    min-height: 125px;
-    border-radius: 20px;
-    background: #D9D9D9;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    display: flex;
-    justify-content: center;
-    position: relative;
-    padding-left: 70px;
-    flex-direction: column;
+  width: 26rem;
+  min-height: 7.8rem;
+  border-radius: 20px;
+  background: #D9D9D9;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-left: 70px;
+  flex-direction: column;
 }
 
-.currency-input {
-    margin-top: 0px;
-    margin-bottom: 5px;
-    padding: 0.5rem;
-    width: 8rem;
-    height: 3rem;
-    border: none;
-    border-radius: 10px;
-    background-color: #fff;
-    display: flex;
-    margin-left: 200px;
-    text-align: center;
-    font-size: 1.2rem;
-    outline: none;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+#valorOrigem{
+  margin-top: 0px;
+  margin-bottom: 5px;
+  padding: 0.5rem;
+  width: 8rem;
+  height: 3rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  margin-left: 200px;
+  text-align: center;
+  font-size: 1.2rem;
+  outline: none;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.1s;
+
 }
 
-.currency-input::placeholder {
-    color: #A0A0A0;
-}
-
-.result-input {
-    margin-top: 0px;
-    margin-bottom: 5px;
-    padding: 0.5rem;
-    width: 8rem;
-    height: 3rem;
-    border: none;
-    border-radius: 10px;
-    background-color: #fff;
-    display: flex;
-    margin-left: 200px;
-    font-size: 1.2rem;
-    outline: none;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-    color: #333;
-    cursor: not-allowed;
+#valorConvertido{
+  margin-top: 0px;
+  margin-bottom: 5px;
+  padding: 0.5rem;
+  width: 8rem;
+  height: 3rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  margin-left: 200px;
+  font-size: 1.2rem;
+  outline: none;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  color: #333;
+  cursor: not-allowed;
+  
 }
 
 .arrow {
-    width: 24px;
-    height: 24px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .copy-paste-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    background-color: transparent;
-    padding: 1.5rem;
-    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: transparent;
+  padding: 1.5rem;
+  border-radius: 10px;
 }
 
 .buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .copy-btn {
-    width: 40px;
-    height: 40px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    background-size: 24px;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.60;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  background-size: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.60;
 }
 
 .circleFlag {
-    width: 60px;
-    height: 60px;
-    background-color: #406711;
-    border-radius: 50%;
-    margin-right: 20px;
-    position: absolute;
-    bottom: 40px;
+  width: 60px;
+  height: 60px;
+  background-color: #406711;
+  border-radius: 50%;
+  margin-right: 20px;
+  position: absolute;
+  bottom: 40px;
 }
