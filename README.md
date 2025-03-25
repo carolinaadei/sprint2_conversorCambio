@@ -6,5 +6,4 @@ Objetivos do projeto:
 - Trabalhar em grupo e resolver os conflitos
 
 Realizado por: Carolina Gonçalves, Vicente Hoff, Rosana Budant.
-
 Grupo de estudos: AGES e Preto no Branco
