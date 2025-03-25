@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coinverter</title>
+    <link rel="stylesheet" href="CriptoCoinvert.css" />
+  </head>
+  <body>
+    <!-- Page header -->
+    <header>
+        <span> Coin<b>verter</b> </span>
+        <div id="options">
+            <a href="HomeCoinvert.html">
+            <img src="./assets/home-icon.svg" alt="home icon" />
+                Home
+            </a>
+            <a href="CriptoCoinvert.html">
+                <img src="./assets/coin-icon.svg" alt="coin icon" />
+                Criptomoedas
+            </a>
+        <a href="GraficosCoinvert.html">
+          <img src="./assets/graphic-icon.svg" alt="graphic icon" />
+          Gráficos
+        </a>
+      </div>
+    </header>
+    <div class="search-container">
+        <div class="containerSearch">
+            <div class="currency-search">
+                <div class="search-icon"></div>
+                <label for="moedaOrigem"> Moeda de Origem:</label>
+                <select id="moedaOrigem"></select>
+            </div>
+        </div>
+        <div class="containerSearch">
+            <div class="currency-search">
+                <div class="search-icon"></div>
+                <label for="moedaDestino">Moeda de Destino:</label>
+                <select id="moedaDestino"></select>
+            </div>
+        </div>
+    </div>
+    <div class="containerRetangle">
+        <div class="currency-box">
+            <div class="circleFlag"></div>
+        </div>
+        <div class="arrow"></div>
+        <div class="currency-box">
+            <div class="circleFlag"></div>
+        </div>
+    </div>
+    <script src="homeScript.js"></script>
+</body>
+</html>

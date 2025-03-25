@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #9FC587;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header attributes */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #6C9457;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+header > span {
+    font-size: 18px;
+    font-weight: normal;
+    color: #406711;
+}
+
+header > span > b {
+    font-weight: normal;
+    color: black;
+}
+
+header > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header > div > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: black;
+
+    background: #9FC587;
+    border-radius: 20px;
+    padding: 0 1rem;
+}
+header > div > a > img {
+    height: 18px;
+    width: 18px;
+}
+header > div > a:hover {
+  background: #D9D9D9;
+  transition: all 0.3s ease-in-out;
+}
+#options:hover {
+    background-color: transparent;
+    transition: all 0.1s ease-in-out;
+}
+a:active {
+  background-color: #d9d9d9;
+}
+.active {
+background-color: #d9d9d9;
+}
+.arrow-icon{
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3'/%3E%3C/svg%3E");
+  width: 24px;
+  height: 24px;
+}
+.circle {
+width: 50px;
+height: 50px;
+flex-shrink: 0;
+border-radius: 50%;
+background-color: lightgray;
+background-size: cover;
+background-position: center;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.currency-box .circle {
+background: url(<path-to-flag-image>) no-repeat center;
+}
+.currency-box {
+width: 415px;
+height: 125px;
+flex-shrink: 0;
+border-radius: 20px;
+background: #D9D9D9;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+padding-left: 70px;
+}
+.containerRetangle {
+display: flex;
+align-items: center;
+gap: 20px;
+justify-content: center;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.arrow {
+width: 24px;
+height: 24px;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3'/%3E%3C/svg%3E");
+background-repeat: no-repeat;
+background-position: center;
+background-size: contain;
+}
+.search-container {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 130px;
+}
+.currency-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 440px;
+  height: 20px;
+}
+.containerSearch {
+  display: flex;
+  width: 410px;
+  height: 20px;
+  padding: 0px 16px;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  opacity: 0.75;
+  background: #D9D9D9;
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+  padding-left: 24px;
+}
+.search-icon {
+  width: 12px;
+  height: 12px;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"%3E%3Cpath stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /%3E%3C/svg%3E');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.search-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  font-size: 14px;
+  color: black;
+}
+
+/* Bandeiras, valores, aba para digitar valor e botão copiar e colar*/
