@@ -204,12 +204,31 @@ width: 26rem;
   opacity: 0.50;
 }
 
-.circleFlag {
+.circleFlag 
+{
   width: 60px;
   height: 60px;
-  background-color: #406711;
+  background-color: #D9D9D9;
   border-radius: 50%;
   margin-right: 20px;
   position: absolute;
   bottom: 40px;
+  overflow: hidden;
+  display: flex;
+  border: none;
+  transition: 0.7s;
+}
+
+#flagDestino 
+{
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+#idButton
+{
+  background-color: #9FC587;
+  border: none;
+  cursor: pointer;
 }
