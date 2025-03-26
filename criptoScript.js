@@ -1,5 +1,13 @@
 console.log("criptoScript Iniciado");
-    
+//mapeamento para converter pra api de icones
+const criptoMap = {
+    "90": 1,        "80": 1027,      "518": 825,   
+    "2710": 1839,   "33285": 3408,   "58": 52,     
+    "257": 2010,    "2": 74,         "48543": 5426,
+    "45219": 6636 
+};
+
+
 const moedaOrigem = document.getElementById("moedaOrigem");
 const moedaDestino = document.getElementById("moedaDestino");//variavel dos select
 const valorOrigem = document.getElementById("valorOrigem");
@@ -7,8 +15,21 @@ const valorConvertido = document.getElementById("valorConvertido");//variavel do
 
 document.addEventListener("DOMContentLoaded", function () 
 {
-    moedaDestino.innerHTML = moedaOrigem.innerHTML; 
+    valorOrigem.addEventListener("input", fetchData);
+    moedaOrigem.addEventListener("change", function()
+    {
+        fetchData();
+        atualizarCripto();
+    });
+    moedaDestino.addEventListener("change", function()
+    {
+        fetchData();
+        atualizarCripto();
+    });
+    
     fetchData();
+    atualizarCripto();
+    moedaDestino.innerHTML = moedaOrigem.innerHTML;
 });
 
 async function fetchData() 
@@ -38,10 +59,51 @@ async function fetchData()
         }
     }
 
-    fetchData();
+async function getCriptoUrl(codigoCripto)
+{
+    if(typeof codigoCripto !== 'string' || !codigoCripto)
+    {
+        console.error(`Codigo da cripto inválido: ${codigoCripto}`);
+        return null;
+    }
 
-valorOrigem.addEventListener("input", fetchData);
-moedaOrigem.addEventListener("change", fetchData);
-moedaDestino.addEventListener("change", fetchData);
+    const codigoImg = criptoMap[codigoCripto];
 
-//funçao para pegar url da imagem da api da bandeira dos países das moedas
+    if(!codigoImg)
+    {
+        console.error(`Nenhuma codigo correspondente para essa moeda : 
+            ${codigoImg}`);
+            return null;
+    }
+
+    return `https://s2.coinmarketcap.com/static/img/coins/64x64/${codigoImg}.png`;
+}
+
+async function atualizarCripto()
+{
+    try
+    {
+    const iconeOrigem = await getCriptoUrl(moedaOrigem.value);
+    const iconeDestino = await getCriptoUrl(moedaDestino.value);
+
+    document.getElementById("criptoImgOrigem").src = iconeOrigem;
+    document.getElementById("criptoImgDestino").src = iconeDestino;
+    }
+    catch(error)
+    {
+        console.error(`Erro ao atualizar icone das criptos`, error);
+    }
+
+}
+
+function copyButton()
+{
+    const result = document.getElementById("valorConvertido").value;
+    navigator.clipboard.writeText(result);
+
+    alert('Resultado copiado para área de transferência!');
+}
+
+
+
+

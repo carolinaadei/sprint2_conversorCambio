@@ -82,7 +82,7 @@ async function getFlagUrl(codigoMoeda)
         return null;
     }
     
-    return `https://flagcdn.com/144x108/${paisCodigo.toLowerCase()}.png`;
+    return `https://flagcdn.com/w160/${paisCodigo.toLowerCase()}.png`;
 }
 
 async function atualizarBandeiras() 

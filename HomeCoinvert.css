@@ -215,8 +215,11 @@ width: 26rem;
   bottom: 40px;
   overflow: hidden;
   display: flex;
-  border: none;
+  border:2px;
   transition: 0.7s;
+  border-color: #9FC587;
+  border-style: double;
+  border-width: 5px;
 }
 
 #flagDestino 
