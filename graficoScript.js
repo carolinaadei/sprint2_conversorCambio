@@ -1,50 +1,50 @@
-console.log("homeScript.js iniciado")
+console.log("homeScript.js iniciado");
 
-fetchData();
+document.addEventListener("DOMContentLoaded", function() 
+{
+    moeda = document.getElementById("moeda");
 
+    moeda.addEventListener("change", () => 
+    {
+        fetchData(moeda.value);
+    });
 
-document.addEventListener("DOMContentLoaded", function () { //Para copiar os dados dos seletores
-    const selectOrigem = document.getElementById("moedaOrigem");
-    const selectDestino = document.getElementById("moedaDestino");
-
-    selectDestino.innerHTML = selectOrigem.innerHTML;
+    fetchData(moeda.value); // Inicia com a moeda selecionada por padrão
 });
 
-
-async function fetchData() 
+// Função para buscar os últimos 15 dias e atualizar o gráfico
+async function fetchData(moedaSelecionada) 
 {
-    const valorOrigem = document.getElementById("valorOrigem"); //input origem
-    const valorConvertido = document.getElementById("valorConvertido"); //input destino
-    
-    const valor = parseFloat(valorOrigem.value); //variavel contendo o valor que deseja converter
-    const from =  moedaOrigem.value; //variavel contendo o codigo da moeda origem
-    const to = moedaDestino.value; //variavel contendo o codigo da moeda de destino
-    
+    const url = `https://economia.awesomeapi.com.br/json/daily/${moedaSelecionada}/15`;
 
-
-    try
+    try 
     {
-        var apikey = from + "-" + to; //para colar na url da api
-        var key = from  + to; //para chamar a bid
-        const response = await fetch(`https://economia.awesomeapi.com.br/json/last/${apikey}`);
+        const resposta = await fetch(url);
+        const dados = await resposta.json();
 
-        if(!response.ok)
+        // Ordena os dados do mais antigo para o mais recente
+        dados.reverse();
+
+        const barras = document.querySelectorAll(".container-barra");
+
+        dados.forEach((dia, index) => 
         {
-            throw new Error("Could not fetch");
-        }
-        const data = await response.json();
-        console.log(data);//debug
-        console.log(data[key].bid);//debug
+            if (barras[index]) 
+            {
+                let valor = parseFloat(dia.high); // Cotação máxima do dia
+                let dataFormatada = new Date(dia.timestamp * 1000).toLocaleDateString("pt-BR");
 
-        var taxa = parseFloat(data[key].bid);
-        valorConvertido.value = (valor * taxa).toFixed(2);
-    }
-    catch(error)
+                // Define a altura proporcional das barras
+                barras[index].querySelector(".barra").style.height = `${(valor *10)}px`;
+                barras[index].querySelector(".grafChar").innerText = valor.toFixed(2);
+                barras[index].querySelector(".dia").innerText = dataFormatada;
+            }
+        });
+
+        console.log("Gráfico atualizado para:", moedaSelecionada);
+    } 
+    catch (erro) 
     {
-        console.error("Erro ao buscar taxa de Cambio",error);
+        console.error("Erro ao buscar dados:", erro);
     }
 }
-
-valorOrigem.addEventListener("input", fetchData);
-moedaOrigem.addEventListener("change", fetchData);
-moedaDestino.addEventListener("change", fetchData);

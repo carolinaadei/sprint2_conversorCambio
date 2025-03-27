@@ -235,3 +235,17 @@ width: 26rem;
   border: none;
   cursor: pointer;
 }
+
+select {
+  appearance: none; /* Remove o estilo padrão */
+  background-color: #93b77f;
+  border: 2px solid #4CAF50;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s;
+  overflow: visible;
+}
