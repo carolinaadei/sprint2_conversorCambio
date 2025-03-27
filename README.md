@@ -5,5 +5,6 @@ Objetivos do projeto:
 - Utilizar de APIs para realizar as conversões e carregar as bandeiras
 - Trabalhar em grupo e resolver os conflitos
 
-Realizado por: Carolina Gonçalves, Vicente Hoff, Rosana Budant.
+Realizado por: Carolina Gonçalves, Vicente Hoff.
+
 Grupo de estudos: AGES e Preto no Branco
